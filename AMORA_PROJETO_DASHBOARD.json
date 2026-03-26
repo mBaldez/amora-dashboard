@@ -1,0 +1,194 @@
+{
+  "meta": {
+    "titulo": "Projeto: Dashboard de Gerenciador de Agentes de IA",
+    "criado_em": "2026-03-26",
+    "criado_por": "Claude (Assistente Cowork)",
+    "destinatario": "IA Amora",
+    "versao": "1.0.0",
+    "status_atual": "Fase de planejamento — aguardando geração do frontend pelo Antigravity"
+  },
+
+  "sobre_o_projeto": {
+    "nome": "Dashboard de Agentes de IA",
+    "descricao": "Um painel administrativo web privado para gerenciar, monitorar e executar múltiplos agentes de IA. O dashboard centraliza o controle de todos os agentes do Michael em um único lugar, com visual moderno em dark mode.",
+    "objetivo_principal": "Ser o hub central de operações de IA do Michael — onde ele visualiza, ativa, configura e monitora todos os seus agentes de forma eficiente.",
+    "hospedagem": "VPS privada com link de acesso restrito (somente Michael por enquanto)",
+    "acesso": "URL privada — sem autenticação pública, acesso direto via link na VPS"
+  },
+
+  "origem_do_design": {
+    "fonte": "Dashboard visto em vídeo no YouTube",
+    "imagem_referencia": "Dashboard.png (arquivo na pasta do projeto)",
+    "descricao_visual": "Interface dark mode com sidebar de navegação à esquerda, topbar com filtros e busca, e grid de cards de agentes na área principal. Cada card exibe ícone colorido, nome, status (Ativo/Inativo/Projeto) e descrição curta do agente."
+  },
+
+  "tecnologias": {
+    "frontend": "React + TypeScript + Vite",
+    "estilizacao": "Tailwind CSS + shadcn/ui",
+    "icones": "Lucide React + Emojis",
+    "roteamento": "React Router v6",
+    "estado": "Zustand ou Context API",
+    "animacoes": "Framer Motion",
+    "tema": "Dark mode (padrão)"
+  },
+
+  "arquitetura_do_layout": {
+    "sidebar": {
+      "posicao": "Esquerda, fixa, ~240px",
+      "conteudo": [
+        "Logo/Nome do projeto",
+        "Navegação principal: Dashboard, Agentes de IA (com sub-menus), Proposições de Saúde, Automação, Status Operação, Métricas & Análise, Relatórios & Insights",
+        "Seção inferior: Perfil, Configurações, Logout"
+      ]
+    },
+    "topbar": {
+      "posicao": "Horizontal, fixa no topo",
+      "conteudo": [
+        "Breadcrumb dinâmico",
+        "Barra de busca global",
+        "Filtros rápidos de status",
+        "Botão + Novo Agente",
+        "Notificações",
+        "Avatar do usuário"
+      ]
+    },
+    "area_principal": {
+      "pagina_inicial": "Subagentes — grid responsivo de cards (4 colunas desktop)"
+    }
+  },
+
+  "agentes_cadastrados_inicialmente": [
+    { "nome": "Organizer", "emoji": "📁", "categoria": "Produtividade", "status": "Ativo", "descricao": "Organiza e classifica arquivos e tarefas" },
+    { "nome": "Coder", "emoji": "💻", "categoria": "Desenvolvimento", "status": "Ativo", "descricao": "Escreve e revisa código automaticamente" },
+    { "nome": "Verifier", "emoji": "✅", "categoria": "Qualidade", "status": "Inativo", "descricao": "Valida outputs e identifica erros" },
+    { "nome": "Twitter Curator", "emoji": "🐦", "categoria": "Redes Sociais", "status": "Projeto", "descricao": "Curadoria e agendamento de conteúdo no Twitter/X" },
+    { "nome": "YouTube Curator", "emoji": "🎬", "categoria": "Redes Sociais", "status": "Ativo", "descricao": "Analisa e cura vídeos do YouTube" },
+    { "nome": "Reddit Curator", "emoji": "📰", "categoria": "Redes Sociais", "status": "Ativo", "descricao": "Monitora e extrai insights do Reddit" },
+    { "nome": "Email Scanner", "emoji": "📧", "categoria": "Produtividade", "status": "Ativo", "descricao": "Lê e classifica e-mails importantes" },
+    { "nome": "Proposal Manager", "emoji": "📝", "categoria": "Negócios", "status": "Projeto", "descricao": "Gerencia e cria propostas de negócio" },
+    { "nome": "Niche Researcher", "emoji": "🔍", "categoria": "Pesquisa", "status": "Ativo", "descricao": "Pesquisa nichos e tendências de mercado" },
+    { "nome": "Content Writer", "emoji": "✍️", "categoria": "Conteúdo", "status": "Ativo", "descricao": "Produz conteúdo para blogs e redes sociais" },
+    { "nome": "Brainstormer", "emoji": "🧠", "categoria": "Criatividade", "status": "Ativo", "descricao": "Gera ideias e variações criativas" },
+    { "nome": "Researcher", "emoji": "🔬", "categoria": "Pesquisa", "status": "Inativo", "descricao": "Pesquisa profunda em fontes diversas" },
+    { "nome": "Code Reviewer", "emoji": "🔎", "categoria": "Desenvolvimento", "status": "Projeto", "descricao": "Revisa pull requests e qualidade de código" },
+    { "nome": "QA Tester", "emoji": "🧪", "categoria": "Qualidade", "status": "Inativo", "descricao": "Executa testes automáticos e de qualidade" },
+    { "nome": "Debugger", "emoji": "🐛", "categoria": "Desenvolvimento", "status": "Inativo", "descricao": "Identifica e resolve bugs no código" },
+    { "nome": "System Analyst", "emoji": "🏗️", "categoria": "Infraestrutura", "status": "Projeto", "descricao": "Analisa arquitetura e performance do sistema" }
+  ],
+
+  "fases_do_projeto": {
+    "fase_1_mvp": {
+      "nome": "MVP — Frontend Estático",
+      "responsavel": "Antigravity (geração inicial)",
+      "status": "Pendente — aguardando execução do prompt",
+      "entregaveis": [
+        "Sidebar + Topbar funcionais",
+        "Página de Subagentes com grid de cards",
+        "Dados mockados (sem backend)",
+        "Filtros de status funcionando no frontend",
+        "Busca em tempo real",
+        "Dark mode completo"
+      ]
+    },
+    "fase_2_refinamento": {
+      "nome": "Refinamento e Expansão",
+      "responsavel": "Claude (Cowork) + Michael",
+      "status": "Planejada",
+      "entregaveis": [
+        "Dashboard de métricas (charts, KPIs)",
+        "Página de detalhe individual de cada agente",
+        "CRUD completo de agentes (criar, editar, deletar)",
+        "Modal de configuração do agente",
+        "Animações e micro-interações polidas"
+      ]
+    },
+    "fase_3_integracao": {
+      "nome": "Integração com Agentes Reais",
+      "responsavel": "Claude (Cowork) + Michael",
+      "status": "Futura",
+      "entregaveis": [
+        "Conexão com APIs/webhooks dos agentes reais na VPS",
+        "Backend simples (Node.js/Express ou FastAPI) para proxy de chamadas",
+        "Logs e histórico reais de execução",
+        "Autenticação básica (token ou senha)",
+        "Deploy final configurado no Nginx da VPS"
+      ]
+    }
+  },
+
+  "como_amora_pode_ajudar": {
+    "papel_da_amora": "IA de apoio estratégico e de memória do projeto — conhece o contexto completo e auxilia Michael nas decisões e no refinamento do dashboard",
+    "responsabilidades": [
+      "Lembrar o contexto e estado atual do projeto em cada conversa",
+      "Ajudar a refinar funcionalidades e sugerir melhorias de UX/UI",
+      "Revisar o código gerado pelo Antigravity e propor ajustes",
+      "Orientar Michael nas integrações dos agentes reais (fase 3)",
+      "Manter o roadmap atualizado conforme o projeto evolui",
+      "Ajudar a escrever prompts específicos para expandir funcionalidades no Claude Cowork",
+      "Alertar para inconsistências ou problemas de arquitetura detectados"
+    ],
+    "como_abordar_o_projeto": "Sempre consultar este arquivo para entender onde o projeto está. Verificar qual fase está ativa. Perguntar a Michael o que foi entregue pelo Antigravity antes de sugerir próximos passos."
+  },
+
+  "arquivos_do_projeto": {
+    "pasta_base": "Dashboard de Agentes de IA/",
+    "arquivos": [
+      {
+        "nome": "Dashboard.png",
+        "tipo": "Imagem de referência",
+        "descricao": "Captura do dashboard original visto no YouTube — referência visual principal do projeto"
+      },
+      {
+        "nome": "PROMPT_ANTIGRAVITY.md",
+        "tipo": "Prompt de geração",
+        "descricao": "Prompt detalhado e otimizado para ser colado no Antigravity e gerar o frontend completo do dashboard"
+      },
+      {
+        "nome": "AMORA_PROJETO_DASHBOARD.json",
+        "tipo": "Documentação de contexto",
+        "descricao": "Este arquivo — contém todo o pensamento e planejamento do projeto para a IA Amora"
+      }
+    ]
+  },
+
+  "design_tokens": {
+    "cores": {
+      "background_principal": "#0F0F1A",
+      "background_cards": "#1A1A2E",
+      "background_sidebar": "#12121F",
+      "accent_primario": "#7C3AED",
+      "accent_secundario": "#3B82F6",
+      "status_ativo": "#10B981",
+      "status_inativo": "#F59E0B",
+      "status_projeto": "#6366F1",
+      "texto_principal": "#F1F5F9",
+      "texto_secundario": "#94A3B8"
+    },
+    "tipografia": {
+      "fonte": "Inter (Google Fonts)",
+      "pesos": ["400 (corpo)", "600-700 (títulos)"]
+    },
+    "espacamento": {
+      "border_radius_cards": "12px",
+      "border_radius_botoes": "8px"
+    }
+  },
+
+  "proximos_passos_imediatos": [
+    "1. Michael cola o prompt do arquivo PROMPT_ANTIGRAVITY.md no Antigravity",
+    "2. Antigravity gera o projeto React completo",
+    "3. Michael faz upload do resultado aqui na pasta do projeto",
+    "4. Claude (Cowork) revisa o código gerado e aplica refinamentos",
+    "5. Michael testa localmente com `npm install && npm run dev`",
+    "6. Iterações de melhoria com Claude até o MVP estar polido",
+    "7. Deploy na VPS (Nginx serving o build de produção)"
+  ],
+
+  "contexto_do_usuario": {
+    "nome": "Michael Baldez",
+    "perfil": "Usuário iniciante em criação de conteúdo para Instagram e TikTok (direito previdenciário), com interesse avançado em automação com IA",
+    "objetivo_maior": "Centralizar e automatizar processos com agentes de IA, tendo um hub visual de controle",
+    "nivel_tecnico": "Intermediário — confortável com conceitos de IA e automação, mas prefere ferramentas de geração como Antigravity para o trabalho pesado de código",
+    "preferencia_de_trabalho": "Usar tokens de forma faseada e eficiente — deixar Antigravity fazer o trabalho pesado, depois refinar incrementalmente com Claude"
+  }
+}
